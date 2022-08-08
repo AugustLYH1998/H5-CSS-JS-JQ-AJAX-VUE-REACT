@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation拆分写法</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            animation-name: change;
+            animation-duration: 1s;
+
+            /* 重复次数 */
+            /* animation-iteration-count: infinite; */
+
+            /* 速度曲线 逐帧动画*/
+            animation-timing-function: steps(6);
+
+        }
+
+        .box:hover {
+            /* 鼠标移入的时候暂停动画 */
+            animation-play-state: paused;
+        }
+
+
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

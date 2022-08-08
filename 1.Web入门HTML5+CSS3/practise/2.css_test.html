@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test{
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .test1:hover{
+            background-color: orange;
+        }
+    </style>
+    <link rel="stylesheet" href="css/css_test01.css">
+
+</head>
+
+<body>
+    <p>hello world 普通文本 </p>
+
+    <div style="color: red;font-size: 50px;"> 内嵌选择器</div>
+
+    <p class="one size">类选择器</p>
+
+    <div id="two" class="size">id选择器</div>
+
+    <p class="font-set">font复合属性</p>
+
+    <!-- 文本缩进 -->
+    <p class="txt-size">洛杉矶（Los Angeles），位于美国加利福尼亚州西南部，是美国第二大城市，也是美国西部最大的城市，常被称为“天使之城”（City of
+        Angels）。洛杉矶面积约1215平方公里，城市中心坐标为北纬34°03′、西经118°15′，全市拥有约408.67万的人口（2019年） [1] 。2019年，洛杉矶的地区生产总值为7109亿美元 [2] 。
+    </p>
+
+    <!-- 文本对齐方式 -->
+    <h1 class="txt-horizon">洛杉矶</h1>
+    <div class="txt-horizon">
+        <img src="src/img/th.jpg" alt="">
+    </div>
+
+    <!-- 文本修饰 -->
+    <p class="txt-decorate">洛杉矶</p>
+
+    <!-- 行高 -->
+    <p class="txt-lineheight">洛杉矶（Los Angeles），<br> 位于美国加利福尼亚州西南部，是美国第二大城市</p>
+
+    <!-- 标签水平居中 -->
+    <div style="margin:0 auto;background-color: pink;width: 300px;height:300px">洛杉矶margin</div>
+
+    <!-- 后代选择器 -->
+    <div>
+        这是div
+        <p>这是后代p</p>
+    </div>
+
+    <!-- 子代选择器 -->
+    <div>
+        这是父级
+        <a href="">这是子代a</a>
+        <p>
+            <a href="">这是p中的a</a>
+        </p>
+    </div>
+
+    <!-- 并集选择器 -->
+    <p class="class1">ppp</p>
+    <div class="class2">divdiv</div>
+    <span class="class3">span</span>
+    <h1 class="class4">h1h1h1h1</h1>
+
+    <!-- 交集选择器 -->
+    <p class="box">p box</p>
+    <div class="box">div box</div>
+
+    <!-- hover伪类类选择器 -->
+    <a href="#" class="hovertest">这是超链接</a>
+
+    <!-- 例子 -->
+    <hr>
+    <!-- a{导航$}*5 -->
+    <!-- 选多行加内容  alt+shift+左键单击 -->
+    <a href="#" class="test test1">导航1</a>
+    <a href="#" class="test test1">导航2</a>
+    <a href="#" class="test test1">导航3</a>
+    <a href="#" class="test test1">导航4</a>
+    <a href="#" class="test test1">导航5</a>
+
+
+</body>
+
+</html>

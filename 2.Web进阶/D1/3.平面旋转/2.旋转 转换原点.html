@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        img {
+            transition: all 2s;
+
+            border: 1px solid black;
+
+            /* 方位名词  left  top  right  bottom  center */
+            /* 添加在标签本身  不要添加在右下角 */
+            /* 右下角 */
+            transform-origin: right bottom;
+            /* 左下角 */
+            transform-origin: left bottom;
+        }
+
+        img:hover {
+
+
+            /* 单位deg   正数   顺时针旋转 */
+            transform: rotate(360deg);
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="./1.png" alt="">
+
+</body>
+
+</html>

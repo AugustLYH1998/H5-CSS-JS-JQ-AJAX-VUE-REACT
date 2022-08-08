@@ -1,0 +1,24 @@
+// out: ./
+@rootSize : 3.75vw;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+// 68 * 29  -- vw
+.box {
+    width: (68 / @rootSize);
+    height: (29 / @rootSize);
+    background-color: pink;
+}
+
+.box2 {
+    // vh
+    width: (68 / @rootSize);
+    height: (29 / @rootSize);
+    background-color: green;
+}

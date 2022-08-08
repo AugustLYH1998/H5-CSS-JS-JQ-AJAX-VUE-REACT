@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .father {
+            width: 800px;
+            height: 400px;
+            background-color: aqua;
+            margin: 0 auto;
+
+            overflow: hidden;
+        }
+
+        .father::before,
+        .father::after {
+            content: '';
+            width: 400px;
+            height: 400px;
+            transition: all 1s;
+        }
+
+        .father::before {
+            float: left;
+            background-color: azure;
+        }
+
+        .father::after {
+            float: left;
+
+            background-color: greenyellow;
+        }
+
+        .father:hover::before {
+            transform: translate(-100%);
+        }
+
+
+        .father:hover::after {
+            transform: translateX(100%);
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="father">
+
+
+    </div>
+
+</body>
+
+</html>

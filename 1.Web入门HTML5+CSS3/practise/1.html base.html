@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code</title>
+</head>
+
+<body>
+    <!-- ctrl + D -->
+    <h1>安&nbsp;&nbsp;纳&nbsp;&nbsp;海&nbsp;&nbsp;姆&nbsp;&nbsp;</h1>
+    <!-- <h2>2级标题</h2>
+    <h5>5级标题</h5>
+    <h6>6级标题</h6> -->
+
+    <!-- alt 替换文本 -->
+    <!-- title 悬停文本 -->
+    <!-- width height   只写一个会自动比例调整 -->
+    <img src="src/img/th.jpg" alt="图片加载失败" title="安纳海姆INN" width="" height="">
+
+    <br>
+    <hr>
+
+    <!-- 段落标签 -->
+    <p><strong>安纳海姆（Anaheim）</strong>是美国加利福尼亚州橙县的第2大城市，<br>位于洛杉矶东南方28英里处。安纳海姆的人口为<ins>32万8014</ins>，是加州第10和全美国的第55大城。以<em>主题公园、体育和会议中心</em>闻名。
+    </p>
+
+    <p>安纳海姆于1857年由50个德裔家庭创建，1870年2月10日立市。之后，安纳海姆发展成一个工业中心，生产电子产品、航太组件、和水果罐头。
+        <br>1955年开放的世界闻名的主题公园和旅馆综合体—迪士尼乐园度假区、天使体育馆、本田中心球场（Honda
+        Center）、和美国西岸最大的会议中心都位于安纳海姆。<br>安纳海姆英文名称中的“Ana”来自于附近的圣塔安娜河（Santa Ana
+        River），“heim”则源于高地德语，意思是“家”的意思。在还没有立市之间，这个拓居地曾被称为“Campo
+        Alemán”，是西班牙语中“德国人的营地”（German Camp）之意。
+        <br>
+
+        <!-- target _blank 新窗口跳转 -->
+        <a href="https://www.baidu.com" target="_blank"> >>了解更多<< </a>
+    </p>
+
+    <hr>
+    <!-- 表格 table tr td-->
+    <table border="1" width="300" height="50">
+        <caption><strong>订购酒店</strong> </caption>
+        <tr>
+            <th>酒店</th>
+            <th>价格</th>
+            <th>评分</th>
+        </tr>
+        <tr>
+            <td>holiday inn</td>
+            <td>100$/Day</td>
+            <td>5 star</td>
+        </tr>
+        <tr>
+            <td>sunday inn</td>
+            <td>50$/Day</td>
+            <td>4 star</td>
+        </tr>
+    </table>
+
+    <table border="1" width="300" height="50">
+        <caption><strong>订购酒店2</strong> </caption>
+        <thead>
+            <tr>
+                <th>酒店2</th>
+                <th>价格2</th>
+                <th>评分2</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>holiday inn</td>
+                <td>100$/Day</td>
+                <td>5 star</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总结</td>
+                <td>结尾</td>
+                <td>结尾</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- 垂直合并单元格 rowspan 只保留最上面的 -->
+    <!-- 表格 table tr td-->
+    <table border="1" width="300" height="50">
+        <caption><strong>垂直合并单元格</strong> </caption>
+        <tr>
+            <th>酒店</th>
+            <th>价格</th>
+            <th>评分</th>
+        </tr>
+        <tr>
+            <td>holiday inn</td>
+            <td rowspan="2">100$/Day</td>
+            <td>5 star</td>
+        </tr>
+        <tr>
+            <td>sunday inn</td>
+            <!-- <td>50$/Day</td> -->
+            <td>4 star</td>
+        </tr>
+    </table>
+
+
+    <!-- 水平合并单元格 colspan 只保留最左的 -->
+    <!-- 表格 table tr td-->
+    <table border="1" width="300" height="50">
+        <caption><strong>水平合并单元格</strong> </caption>
+        <tr>
+            <th>酒店</th>
+            <th>价格</th>
+            <th>评分</th>
+        </tr>
+        <tr>
+            <td>holiday inn</td>
+            <td colspan="2">100$/Day</td>
+            <!-- <td>5 star</td> -->
+        </tr>
+        <tr>
+            <td>sunday inn</td>
+            <td>50$/Day</td>
+            <td>4 star</td>
+        </tr>
+    </table>
+    <hr>
+
+    <!-- 表单 输入框 -->
+    <form action="">
+        <!-- input 表单 placeholder占位符-->
+        文本框：<input type="text" name="" id="" placeholder="用户名">
+        <br>
+        密码框：<input type="password" name="" id="" placeholder="密码">
+        <br>
+        <!-- name 分为一组 ；checked 默认勾选项-->
+        单选框：
+        <input type="radio" name="gender" id="nan" checked><label for="nan">男</label>
+        <label><input type="radio" name="gender">女</label>
+        <br>
+        多选框：<input type="checkbox" name="" id="" checked>
+        <br>
+        <!-- multiple 多个选择文件 -->
+        上传文件：<input type="file" name="" id="" multiple>
+        <br>
+        <br>
+        <!-- 按钮 -->
+        <input type="submit" value="免费注册">
+        <input type="reset">
+        <input type="button" name="" id="" value="普通按钮 无默认功能">
+    </form>
+
+    <hr>
+    button标签
+    <!-- button标签 -->
+    <form action="">
+        <input type="text" name="" id=""> <br>
+        <button type="submit">button的submit</button> <br>
+        <button type="submit">buttong的reset</button><br>
+        <button>普通按钮 没有任何功能</button>
+    </form>
+
+    <br>
+    <!-- select 标签 ;selected默认选中-->
+    所在城市：
+    <select name="" id="">
+        <option value="">北京</option>
+        <option value="">上海</option>
+        <option value="">广州</option>
+        <option value="" selected>成都</option>
+    </select>
+
+    <hr>
+    <!-- textarea 文本域 -->
+    <textarea name="" id="" cols="50" rows="10">文本域</textarea>
+
+    <hr>
+
+    <hr>
+    <!-- 删除线等 -->
+    <b>加粗</b>
+    <strong>加粗</strong>
+
+    <u>下划线</u>
+    <ins>下划线</ins>
+
+    <i>倾斜</i>
+    <em>倾斜</em>
+
+    <s>删除线</s>
+    <del>删除线</del>
+
+    <hr>
+    <br>
+    <!-- 音频标签 -->
+    <audio src="#" controls autoplay loop></audio>
+
+    <br>
+    <!-- 视频标签 -->
+    <video src="#" controls autoplay loop></video>
+
+    <hr>
+
+    <!-- 无序标签 -->
+    <ul>
+        <li>榴莲</li>
+        <li>香蕉</li>
+        <li>苹果</li>
+    </ul>
+
+
+    <!-- 有序列表 -->
+    <ul>
+        <ol>
+            <li>西瓜1</li>
+            <li>桃子1</li>
+        </ol>
+        <ol>
+            <li>西瓜2</li>
+            <li>桃子2</li>
+        </ol>
+    </ul>
+
+    <!-- 自定义列表 -->
+    <dl>
+        <dt>帮助中心</dt>
+        <dd>购物指南</dd>
+        <dd>旅行指南</dd>
+    </dl>
+
+
+    <!-- 移动端常用标签 -->
+    <header>网页头部</header>
+    <nav>网页导航</nav>
+    <footer>网页底部</footer>
+    <aside>侧边栏</aside>
+    <section>网页区块</section>
+    <article>网页文章</article>
+
+    <hr>
+
+    <table border="1">
+        <caption><strong>优秀学生信息表</strong> </caption>
+        <tr>
+            <th>年级</th>
+            <th>姓名</th>
+            <th>学号</th>
+            <th>班级</th>
+        </tr>
+        <tr>
+            <td rowspan="2">高三</td>
+            <td>张三</td>
+            <td>110</td>
+            <td>三年二班</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>110</td>
+            <td>三年二班</td>
+        </tr>
+        <tr>
+            <td>评语</td>
+            <td colspan="3">1</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

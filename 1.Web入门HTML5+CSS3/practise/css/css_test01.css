@@ -1,0 +1,178 @@
+/* 通配符选择器 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 标签选择器 */
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+
+/* 类选择器 */
+.one {
+    color: blue;
+
+    /* font-weight  正常normal  加粗bold  正常400  加粗700 */
+    font-weight: bold;
+
+    /* font-style italic倾斜*/
+    font-style: italic;
+
+    /* font-family 如果用户没有安装选择字体，sans-serif 代表按任意一种非衬线字体系列显示*/
+    font-family: YaHei, arial, sans-serif;
+}
+
+.size {
+    font-size: 66px;
+}
+
+/* id选择器 */
+#two {
+    /* 后面的层叠样式会掩盖前面的层叠样式 */
+    color: azure;
+    color: green;
+}
+
+
+
+
+/* font复合属性 */
+/* font:style weight size/line-height family */
+.font-set {
+    font: italic 100 100px 微软雅黑;
+}
+
+/* 文本缩进 */
+/* em 一个字的大小 */
+.txt-size {
+    text-indent: 2em;
+    font-size: 50px;
+}
+
+/* 文本水平对齐 */
+/* 能居中的元素   1、文本  2、span、a  3、input、img */
+.txt-horizon {
+    /* text-align: left; */
+    /* text-align: right; */
+    /* 内容居中 */
+    text-align: center;
+}
+
+/* 文本修饰 */
+.txt-decorate {
+    /* 下划线 */
+    text-decoration: underline;
+    /* 删除线 */
+    /* text-decoration: line-through; */
+    /* 上滑线 */
+    /* text-decoration: overline; */
+    /* 无修饰 */
+    /* text-decoration: none; */
+}
+
+/* 行高 */
+/* 上间距到下间距的px长度 */
+/* 倍数写法  字号的1.5倍 */
+.txt-lineheight {
+    /* line-height: 50px; */
+    line-height: 1.5;
+}
+
+/* 后代选择器 */
+div p {
+    color: red;
+}
+
+/* 子代选择器  只选择一次*/
+div>a {
+    color: red;
+}
+
+/* 并集选择器 选择器1，选择器2 {css} */
+.class1,
+.class2,
+.class3,
+.class4 {
+    color: green;
+}
+
+/* 交集选择器   多个类选择器为同一名字 */
+/* 必须是p这个标签同事还应用了box这个类 */
+p.box {
+    color: red;
+}
+
+
+/* hover 伪类选择器 */
+/* 任何标签都可以添加伪类 */
+.hovertest:hover {
+    color: green;
+    background-color: yellow;
+}
+
+/* 背景颜色 */
+.bgcolor {
+    background-color: green;
+}
+
+/* 背景图片 */
+.bgcimg {
+    background-image: url(#);
+}
+
+/* 背景平铺 */
+/* background-repeat   repeat   no-repeat  repeat-x  repeat-y */
+.bgrepeat {
+    background-repeat: repeat;
+}
+
+/* 背景位置 */
+.bgp {
+    /* 右上角 */
+    /* background-position: right 0; */
+    /* 右下角 */
+    /* background-position: right buttom; */
+    /* 居中 */
+    background-position: center center;
+
+    /* 水平 */
+    /* background-position: 50px center; */
+}
+
+/* 行内块转换 display */
+.switch {
+    width: 100px;
+    height: 100px;
+
+    /* 行内块 */
+    display: inline-block;
+
+    /* 块 */
+    display: block;
+}
+
+/* 复合选择器权重 */
+/* 先判断文字是否继承 */
+/* 继承的权重最低 */
+/* 1级          2级         3级         4级      */
+/* 行内个数  id选择器个数  类选择器个数  标签选择器个数   */
+/* !important如果不是继承 则权重最高 */
+/* 如果选择器一样  谁在后边谁生效 */
+/* 如果都是继承  判断优先继承谁 */

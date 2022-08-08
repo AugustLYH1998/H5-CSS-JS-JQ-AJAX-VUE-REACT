@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box{
+            
+            margin: 50px auto;
+
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+
+            /* 一个值  表示4个角都是相同的 */
+            /* border-radius: 10px; */
+
+
+            /* 4值 左上 右上 右下 左下  */
+            /* border-radius: 10px 20px 40px 80px; */
+
+            /* 3个值 左上 右上 右下  最后一个角看对角*/
+            /* border-radius: 10px 40px 80px; */
+
+            /* 2个值 左上 右上  后面的角看对角*/
+            /* border-radius: 10px 80px; */
+
+
+            /* 画一个正圆 */
+            border-radius:50%;
+        }
+
+        .box1{
+            margin: 100px auto;
+
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+
+            /* 胶囊按钮 */
+            /* 保证盒子是长方形 然后取值高度一半 */
+            border-radius: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+</body>
+
+</html>

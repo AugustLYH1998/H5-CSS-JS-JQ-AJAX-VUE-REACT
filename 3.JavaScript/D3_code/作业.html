@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+
+        var sum = 0;
+        // 1.求1-100之间所有数的总和与平均值
+        for (var i = 1; i <= 100; i++) {
+            sum = sum + i;
+        }
+        console.log('1-100的总和：' + sum);
+        console.log('1-100的平均值：' + (sum / 100));
+
+        console.log(0.1 + 0.2);//0.30000000000000004
+        console.log((0.1 + 0.2).toFixed(4));//0.3000
+        console.log(parseFloat(0.1 + 0.2));//0.30000000000000004
+        console.log(3.0 + 2.1);//5.1
+
+
+        // 求1到100的累加值  跳过个位数为3的数
+        var sum1 = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 10 != 3) {
+                sum1 = sum1 + i;
+            } else {
+                continue;
+            }
+        }
+        console.log(sum1);
+
+        // ATM
+        var money = 0;
+        var flag = true;
+
+        while (flag) {
+            var value = prompt('请输入您的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+            if (parseFloat(value) == 1) {
+                var tmp = prompt('请输入你要存的钱：');
+                money = parseFloat(money) + parseFloat(tmp);
+                alert('您现在的钱为：' + money);
+                continue;
+            }
+            else if (parseFloat(value) == 2) {
+                var tmp = prompt('请输入你要取的钱：');
+                money = parseFloat(money) - parseFloat(tmp);
+                alert('您现在的钱为：' + money);
+                continue;
+            }
+            else if (parseFloat(value) == 3) {
+                alert('您现在的钱为：' + money);
+                continue;
+            } else if (parseFloat(value) == 4) {
+                alert('正在退出。。。');
+                break;
+            }
+            break;
+        };
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

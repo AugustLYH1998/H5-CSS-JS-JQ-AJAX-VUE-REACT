@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 800px;
+            height: 200px;
+            border: 1px solid black;
+
+            overflow: hidden;
+        }
+
+        img {
+            width: 200px;
+            transition: all 2s;
+        }
+
+        .box:hover img {
+            transform: translate(300%) rotate(720deg);
+
+            /* 不行的 x 与 y*/
+            /* transform: rotate(720deg) translate(300%); */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+        <img src="./2.png" alt="">
+    </div>
+
+</body>
+
+</html>

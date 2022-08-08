@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .one,
+        .two {
+            height: 50px;
+
+            box-sizing: border-box;
+
+            /* 浏览器遇到行内和行内块标签当做文字处理 默认文字是按基线独享 */
+            vertical-align: middle;
+        }
+
+        .three {
+            vertical-align: middle;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 情景1 -->
+    <input type="text" name="" id="" class="one">
+    <input type="button" value="搜索" class="two">
+
+    <hr>
+    <!-- 情景2 -->
+    <img src="./src/img/th.jpg" alt="" class="three"> <input type="text">
+    <hr>
+
+    <!-- 情景3 -->
+    <div class="box">
+        <input style="vertical-align: top;" type="text" name="" id="">
+    </div>
+
+
+</body>
+
+</html>
