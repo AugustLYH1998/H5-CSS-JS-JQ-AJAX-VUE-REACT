@@ -45,10 +45,31 @@ $(function () {
         console.log(res.data.info.text);
         if (res.message === 'success') {
           $(".talk_list").append('<li class="left_word"><img src="img/person01.png" /><span>' + res.data.info.text + '</span></li>');
+
+          getVoice(res.data.info.text);
+
         }
       }
     });
   }
 
-
+  // getVoice("你好");
+  // 获得语音
+  function getVoice(text) {
+    $.ajax({
+      method: 'get',
+      url: 'http://www.liulongbin.top:3006/api/synthesize',
+      data: {
+        text: text
+      },
+      success: function (res) {
+        console.log(res);
+        if (res.status === 200) {
+          // console.log(res.voiceUrl);
+          // console.log($("#voice").prop("src", res.voiceUrl));
+          $("#voice").prop("src", res.voiceUrl);
+        }
+      }
+    });
+  }
 })

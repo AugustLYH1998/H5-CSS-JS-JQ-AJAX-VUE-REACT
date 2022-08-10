@@ -20,8 +20,11 @@
   <!-- 3.1 模板的 HTML 结构，必须定义到 script 中 -->
   <script type="text/html" id="tpl-user">
     <h1>{{name}}    ------    {{age}}</h1>
+
+    <!-- 原文输出  如果包含html标签 就得使用原文输出{{@ value}} -->
     {{@ test}}
 
+    <!-- 条件输出 -->
     <div>
       {{if flag === 0}}
       flag的值是0
@@ -30,17 +33,21 @@
       {{/if}}
     </div>
 
+    <!-- 循环 -->
     <ul>
       {{each hobby}}
       <li>索引是:{{$index}}，循环项是:{{$value}}</li>
       {{/each}}
     </ul>
 
+    <!-- 过滤器 -->
+    <!-- 管道  上一个输出作为下一个输入  -->
     <h3>{{regTime | dateFormat}}</h3>
   </script>
 
   <script>
     // 定义处理时间的过滤器
+    // {{value|filterName}}
     template.defaults.imports.dateFormat = function (date) {
       var y = date.getFullYear()
       var m = date.getMonth() + 1
@@ -51,13 +58,20 @@
 
 
     // 2. 定义需要渲染的数据
-    var data = { name: 'zs', age: 20, test: '<h3>测试原文输出</h3>', flag: 1, hobby: ['吃饭', '睡觉', '写代码'], regTime: new Date() }
+    var data = {
+      name: 'zs',
+      age: 20,
+      test: '<h3>测试原文输出</h3>',
+      flag: 1,
+      hobby: ['吃饭', '睡觉', '写代码'],
+      regTime: new Date()
+    }
 
     // 4. 调用 template 函数
-    var htmlStr = template('tpl-user', data)
-    console.log(htmlStr)
+    var htmlStr = template('tpl-user', data);
+    console.log(htmlStr);
     // 5. 渲染HTML结构
-    $('#container').html(htmlStr)
+    $('#container').html(htmlStr);
   </script>
 </body>
 

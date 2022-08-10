@@ -29,8 +29,10 @@
       // 第二种方式
       $('#f1').on('submit', function (e) {
         e.preventDefault()
-        var data = $('#f1').serialize()
-        console.log(data)
+        console.log(e);
+        var data = $('#f1').serialize();
+        console.log(data);
+        // user_name=123&password=123
       })
     })
   </script>

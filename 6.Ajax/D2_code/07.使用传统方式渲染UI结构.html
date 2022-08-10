@@ -34,17 +34,18 @@
 
 
     $(function () {
-      $('#name').html(data.name)
-      $('#title').html(data.title)
-      $('#age').html(data.age)
-      $('#isVIP').html(data.isVIP)
-      $('#regTime').html(data.regTime)
+      $('#name').html(data.name);
+      $('#title').html(data.title);
+      $('#age').html(data.age);
+      $('#isVIP').html(data.isVIP);
+      $('#regTime').html(data.regTime);
 
       var rows = []
       $.each(data.hobby, function (i, item) {
         rows.push('<li>' + item + '</li>')
       })
       $('#hobby').html(rows.join(''))
+      // $('#hobby').html(data.hobby);
     })
   </script>
 </body>

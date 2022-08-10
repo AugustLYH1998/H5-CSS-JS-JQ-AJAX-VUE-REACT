@@ -20,13 +20,15 @@
   <script>
     $(function () {
       // 第一种方式
-      // $('#f1').submit(function () {
+      // $('#f1').submit(function (e) {
       //   alert('监听到了表单的提交事件')
+      //   e.preventDefault()
       // })
 
       // 第二种方式
-      $('#f1').on('submit', function () {  
-        alert('监听到了表单的提交事件2')
+      $('#f1').on('submit', function (e) {
+        alert('监听到了表单的提交事件2');
+        e.preventDefault();
       })
     })
   </script>
