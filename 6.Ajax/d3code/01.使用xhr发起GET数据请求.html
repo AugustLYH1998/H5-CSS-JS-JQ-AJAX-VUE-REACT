@@ -11,16 +11,20 @@
 <body>
   <script>
     // 1. 创建 XHR 对象
-    var xhr = new XMLHttpRequest()
+    var xhr = new XMLHttpRequest();
+
     // 2. 调用 open 函数
-    xhr.open('GET', 'http://www.liulongbin.top:3006/api/getbooks')
-    // 3. 调用 send 函数
-    xhr.send()
+    xhr.open('GET', 'http://www.liulongbin.top:3006/api/getbooks');
+
+    // 3. 调用 send 函数 发起ajax请求
+    xhr.send();
+    
     // 4. 监听 onreadystatechange 事件
     xhr.onreadystatechange = function () {
+      // xhr请求状态 readyState
       if (xhr.readyState === 4 && xhr.status === 200) {
         // 获取服务器响应的数据
-        console.log(xhr.responseText)
+        console.log(xhr.responseText);
       }
     }
   </script>

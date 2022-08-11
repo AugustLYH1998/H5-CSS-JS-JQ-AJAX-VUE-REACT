@@ -1,6 +1,7 @@
 function resolveData(data) {
   var arr = []
   for (var k in data) {
+    console.log(k);
     var str = k + '=' + data[k]
     arr.push(str)
   }
@@ -8,14 +9,14 @@ function resolveData(data) {
   return arr.join('&')
 }
 
-// var res = resolveData({ name: 'zs', age: 20 })
-// console.log(res)
+var res = resolveData({ name: 'zs', age: 20 })
+console.log(res)
 
 function itheima(options) {
-  var xhr = new XMLHttpRequest()
+  var xhr = new XMLHttpRequest();
 
   // 把外界传递过来的参数对象，转换为 查询字符串
-  var qs = resolveData(options.data)
+  var qs = resolveData(options.data);
 
   if (options.method.toUpperCase() === 'GET') {
     // 发起GET请求
@@ -31,7 +32,7 @@ function itheima(options) {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var result = JSON.parse(xhr.responseText)
-      options.success(result)
+      options.success(result);
     }
   }
 }

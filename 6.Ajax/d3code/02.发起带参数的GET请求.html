@@ -10,12 +10,14 @@
 
 <body>
   <script>
-    var xhr = new XMLHttpRequest()
-    xhr.open('GET', 'http://www.liulongbin.top:3006/api/getbooks?id=1')
-    xhr.send()
+    var xhr = new XMLHttpRequest();
+    
+    // 查询字符串 ?
+    xhr.open('GET', 'http://www.liulongbin.top:3006/api/getbooks?id=1');
+    xhr.send();
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
-        console.log(xhr.responseText)
+        console.log(xhr.responseText);
       }
     }
   </script>

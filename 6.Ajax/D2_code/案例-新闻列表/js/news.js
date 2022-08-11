@@ -35,10 +35,11 @@ $(function () {
       }
       console.log(res)
       var htmlStr = template('tpl-news', res)
+      console.log(htmlStr);
       $('#news-list').html(htmlStr)
     })
   }
 
-  getNewsList()
+  getNewsList();
 
 })

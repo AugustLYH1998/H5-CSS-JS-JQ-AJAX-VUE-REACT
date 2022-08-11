@@ -10,14 +10,18 @@
 
 <body>
   <script>
+    // JSON转换为JS对象
     // var jsonStr = '{"a": "Hello", "b": "world"}'
     // var obj = JSON.parse(jsonStr)
     // console.log(obj)
 
-    var obj2 = { a: 'hello', b: 'world', c: false }
-    var str = JSON.stringify(obj2)
-    console.log(str)
-    console.log(typeof str)
+    // js对象转换为json对象
+    var obj2 = { a: 'hello', b: 'world', c: false };
+    var str = JSON.stringify(obj2);
+    console.log(str);
+    // {"a":"hello","b":"world","c":false}
+    console.log(typeof str);
+    // string
   </script>
 </body>
 
