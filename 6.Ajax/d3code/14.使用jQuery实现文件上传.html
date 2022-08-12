@@ -17,40 +17,47 @@
   <br />
   <img src="./images/loading.gif" alt="" style="display: none;" id="loading" />
 
+  <img src="" alt="" id="upimg">;
+
   <script>
     $(function () {
       // 监听到Ajax请求被发起了
       $(document).ajaxStart(function () {
-        $('#loading').show()
-      })
+        $('#loading').show();
+      });
 
       // 监听到 Ajax 完成的事件
       $(document).ajaxStop(function () {
-        $('#loading').hide()
-      })
+        $('#loading').hide();
+      });
 
+      // 文件上传
       $('#btnUpload').on('click', function () {
-        var files = $('#file1')[0].files
+        var files = $('#file1')[0].files;
         if (files.length <= 0) {
-          return alert('请选择文件后再上传！')
+          return alert('请选择文件后再上传！');
         }
-
-        var fd = new FormData()
-        fd.append('avatar', files[0])
+        var fd = new FormData();
+        fd.append('avatar', files[0]);
 
         // 发起 jQuery 的 Ajax 请求，上传文件
+        // 必须调用$.ajax
         $.ajax({
           method: 'POST',
           url: 'http://www.liulongbin.top:3006/api/upload/avatar',
           data: fd,
+          // processData 不对url进行编码
           processData: false,
+          // contentType 默认false
           contentType: false,
           success: function (res) {
-            console.log(res)
+            console.log(JSON.stringify(res));
+            console.log(res.url);
+            $("#upimg").prop("src", 'http://www.liulongbin.top:3006' + res.url);
           }
         })
-      })
-    })
+      });
+    });
   </script>
 
 </body>

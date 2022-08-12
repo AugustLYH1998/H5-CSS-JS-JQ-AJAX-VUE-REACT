@@ -17,12 +17,16 @@
         url: 'http://ajax.frontend.itheima.net:3006/api/jsonp?name=zs&age=20',
         // 代表我们要发起JSONP的数据请求
         dataType: 'jsonp',
+
+        // 指定发送到服务端的参数名称 默认为callback
         jsonp: 'callback',
+
+        // 自定义的回调函数名称、默认值为jqueryxxx格式
         jsonpCallback: 'abc',
         success: function (res) {
-          console.log(res)
+          console.log(res);
         }
-      })
+      });
     })
   </script>
 </body>

@@ -27,9 +27,9 @@
   <script>
     $(function () {
       // 1. 获取到图片
-      var angel = $('#angel')
+      var angel = $('#angel');
       // 步骤1. 定义节流阀
-      var timer = null
+      var timer = null;
       // 2. 绑定 mousemove 事件
       $(document).on('mousemove', function (e) {
         // 步骤3：判断节流阀是否为空
@@ -38,7 +38,8 @@
         // 步骤2：开启延时器
         timer = setTimeout(function () {
           $(angel).css('top', e.pageY + 'px').css('left', e.pageX + 'px')
-          console.log('ok')
+          console.log('ok');
+          
           timer = null
         }, 16)
 

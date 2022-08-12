@@ -41,16 +41,20 @@
       // 将用户选择的文件，添加到 FormData 中
       fd.append('avatar', files[0])
 
-      var xhr = new XMLHttpRequest()
+      var xhr = new XMLHttpRequest();
 
       // 监听文件上传的进度
+      // 监听xhr.upload.onprogress
       xhr.upload.onprogress = function (e) {
+        // e.lengthComputable是一个布尔值，表示当前上传的资源是否具有可计算的长度
         if (e.lengthComputable) {
+          // e.loaded 已传输的字节
+          // 额。total 需传输的总字节
           // 计算出上传的进度
-          var procentComplete = Math.ceil((e.loaded / e.total) * 100)
-          console.log(procentComplete)
+          var procentComplete = Math.ceil((e.loaded / e.total) * 100);
+          console.log(procentComplete);
           // 动态设置进度条
-          $('#percent').attr('style', 'width: ' + procentComplete + '%;').html(procentComplete + '%')
+          $('#percent').prop('style', 'width: ' + procentComplete + '%;').html(procentComplete + '%');
         }
       }
 
