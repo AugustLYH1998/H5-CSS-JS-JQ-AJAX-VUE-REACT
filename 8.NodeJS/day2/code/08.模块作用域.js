@@ -1,5 +1,5 @@
-const username = '张三'
+const username = '张三';
 
 function sayHello() {
-  console.log('大家好，我是' + username)
+  console.log('大家好，我是' + username);
 }
