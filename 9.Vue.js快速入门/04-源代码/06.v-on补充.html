@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-on补充</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <input type="button" value="简写指令" @click="doIt(666,'老铁')">
+        <input type="button" value="v-on指令" v-on:click="doIt(666,'老铁')">
+        <input type="button" value="双击指令" @dblclick="dbClick()">
+
+        <input type="text" @keyup.enter="sayHi">
+
+        <input type="button" value="changeFood" @click="changeFood()">{{food}}
+
+    </div>
+    <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                food: "番茄炒蛋"
+            },
+            methods: {
+                doIt: function (p1, p2) {
+                    alert("做it");
+                    console.log(p1);
+                    console.log(p2);
+                },
+                sayHi: function () {
+                    alert("吃了没");
+                },
+                dbClick: function () {
+                    alert("双击了");
+                },
+                changeFood: function () {
+                    alert(this.food);
+                    console.log(this.food);
+                    this.food += 'haochi';
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
