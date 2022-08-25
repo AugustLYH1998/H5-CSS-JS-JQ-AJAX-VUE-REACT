@@ -13,60 +13,63 @@
 <body>
   <!-- 主体区域 -->
   <section id="todoapp">
+
     <!-- 输入框 -->
     <header class="header">
       <h1>小黑记事本</h1>
-      <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务"
-        class="new-todo" />
+      <input autofocus="autofocus" autocomplete="off" placeholder="请输入任务" class="new-todo" v-model="inputVaule"
+        @keyup.enter="add" />
     </header>
+
     <!-- 列表区域 -->
     <section class="main">
       <ul class="todo-list">
-        <li class="todo" v-for="(item,index) in list">
+        <li class="todo" v-for="(i,index) in list">
           <div class="view">
-            <span class="index">{{ index+1 }}.</span>
-            <label>{{ item }}</label>
+            <span class="index">{{index}}</span>
+            <label>{{i}}</label>
             <button class="destroy" @click="remove(index)"></button>
           </div>
         </li>
       </ul>
     </section>
+
     <!-- 统计和清空 -->
-    <footer class="footer" >
-      <span class="todo-count">
-        <strong>1</strong> items left
+    <footer class="footer">
+      <span class="todo-count" v-show="list.length!=0">
+        <strong>{{list.length}}</strong> items left
       </span>
-      <button class="clear-completed">
+      <button class="clear-completed" @click="clear" v-show="list.length!=0">
         Clear
       </button>
     </footer>
+
   </section>
-  <!-- 底部 -->
-  <footer class="info">
-    <p>
-      <a href="http://www.itheima.com/"><img src="./img/black.png" alt="" /></a>
-    </p>
-  </footer>
   <!-- 开发环境版本，包含了有帮助的命令行警告 -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
-    var app = new Vue({
+
+    var todoapp = new Vue({
       el: "#todoapp",
       data: {
-        list: ["写代码", "吃饭饭", "睡觉觉"],
-        inputValue: "好好学习,天天向上"
+        list: ["写代码", "吃饭", "dadoudou"],
+        inputVaule: ""
       },
       methods: {
         add: function () {
-          this.list.push(this.inputValue);
+          this.list.push(this.inputVaule);
+          console.log(this.list);
         },
-        remove:function(index){
-          console.log("删除");
-          console.log(index);
-          this.list.splice(index,1);
+        remove: function (index) {
+          this.list.splice(index, 1);
+          console.log(this.list);
+        },
+        clear: function () {
+          this.list.splice(0);
         }
       },
     })
+
   </script>
 </body>
 

@@ -8,26 +8,30 @@
   2. 查询数据
   3. 渲染数据
   */
- var app = new Vue({
-     el:"#app",
-     data:{
-         city:'',
-         weatherList:[]
-     },
-     methods: {
-         searchWeather:function(){
-            //  console.log('天气查询');
-            //  console.log(this.city);
-            // 调用接口
-            // 保存this
+var app = new Vue({
+    el: "#app",
+    data: {
+        city: '',
+        weatherList: []
+    },
+    methods: {
+        searchWeather: function () {
             var that = this;
-            axios.get('http://wthrcdn.etouch.cn/weather_mini?city='+this.city)
-            .then(function(response){
-                // console.log(response);
-                console.log(response.data.data.forecast);
-                that.weatherList = response.data.data.forecast
-            })
-            .catch(function(err){})
-         }
-     },
- })
+            axios.get('http://wthrcdn.etouch.cn/weather_mini?city=' + this.city)
+                .then(function (response) {
+                    // console.log(response.data.data.forecast);
+                    that.weatherList = response.data.data.forecast;
+                })
+                .catch(function (err) { console.log(err); });
+        },
+        fixSearch: function (city) {
+            var that = this;
+            axios.get('http://wthrcdn.etouch.cn/weather_mini?city=' + city)
+                .then(function (response) {
+                    // console.log(response.data.data.forecast);
+                    that.weatherList = response.data.data.forecast;
+                })
+                .catch(function (err) { console.log(err); });
+        }
+    },
+})
