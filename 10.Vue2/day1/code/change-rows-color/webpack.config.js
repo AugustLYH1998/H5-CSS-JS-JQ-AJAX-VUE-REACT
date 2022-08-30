@@ -7,11 +7,19 @@ const htmlPlugin = new HtmlPlugin({
     filename: './index.html'
 })
 
+// 左侧：结构赋值
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
     // 用来构建模式   development 和 production  开发或生产
     mode: 'development',
+
+    // 开发调试
+    // devtool: 'eval-source-map',
+
+    // 实际发布考虑安全性
+    devtool: 'nosources-source-map',
 
     // 指定入口处理文件
     entry: path.join(__dirname, "./src/index1.js"),
@@ -19,11 +27,11 @@ module.exports = {
     // 指定webpack输出js
     output: {
         path: path.join(__dirname, "./dist"),
-        filename: 'bundle.js'
+        filename: 'js/bundle.js'
     },
 
     // 使用html plugin
-    plugins: [htmlPlugin],
+    plugins: [htmlPlugin, new CleanWebpackPlugin()],
 
     // 使用节点devServer
     devServer: {
@@ -50,5 +58,11 @@ module.exports = {
             // 因为第三方包中的 JS 兼容性，不需要程序员关心
             { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }
         ]
+    },
+    resolve: {
+        alias: {
+            '@': path.join(__dirname, './src')
+        }
     }
+
 }

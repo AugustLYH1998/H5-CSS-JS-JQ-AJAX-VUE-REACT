@@ -6,11 +6,11 @@ import $ from 'jquery'
 
 // 导入样式（在 webpack 中，一切皆模块，都可以通过 ES6 导入语法进行导入和使用）
 // 如果某个模块中，使用 from 接收到的成员为 undefined，则没必要进行接收
-import './css/index.css'
-import './css/index.less'
+import '@/css/index.css'
+import '@/css/index.less'
 
 // 导入图片
-import logo from './images/logo.jpg'
+import logo from '@/images/logo.jpg'
 // 动态赋值
 $('.box').attr('src', logo);
 
