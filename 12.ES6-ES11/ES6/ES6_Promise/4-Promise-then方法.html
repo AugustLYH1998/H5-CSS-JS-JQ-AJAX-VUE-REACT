@@ -15,14 +15,11 @@
 
         // 使用promise封装
         const p = new Promise((resolve, reject) => {
-            fs.readFile(__dirname + '/resources/为学.md', (err, dataStr) => {
-                if (err) reject(err);
-                resolve(dataStr);
-            });
+            setTimeout(()=>{})
         });
 
         p.then((value) => {
-            console.log(value.toString());
+            console.log(value);
         }, (reason) => {
             console.log(reason);
         });
