@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const P = new Promise((resolve, reject) => {
+            // https://api.apiopen.top/getJoke
+            const XHR = new XMLHttpRequest();
+            XHR.open("GET", 'https://api.apiopen.top/getJoke');
+            XHR.send();
+            XHR.onreadystatechange = () => {
+                if (XHR.readyState === 4) {
+                    if (XHR.status >= 200 && XHR.status < 300) {
+                        console.log(XHR.response);
+                    } else {
+                        console.log(XHR.status);
+                    }
+                }
+            }
+        });
+
+        P.then((value) => {
+            console.log(value);
+        }, (reason) => {
+            console.log(reason);
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>
