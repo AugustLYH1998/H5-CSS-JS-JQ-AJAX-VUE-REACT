@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let str = `<ul id="name">
+        <li>
+            <a>肖申克的救赎</a>
+            <p>上映时间 1990</p>
+        </li>
+        <li>
+            <a>肖申克的救赎1</a>
+            <p>上映时间 1991</p>
+        </li>
+        <li>
+            <a>肖申克的救赎2</a>
+            <p>上映时间 1992</p>
+        </li>
+        <li>
+            <a>肖申克的救赎3</a>
+            <p>上映时间 1993</p>
+        </li>
+
+    </ul>`;
+
+        const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/sg;
+        const result = str.matchAll(reg);
+
+        console.log(result);
+
+        for (let v of result) {
+            console.log(v);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
