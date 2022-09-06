@@ -15,14 +15,34 @@
 
         // 使用promise封装
         const p = new Promise((resolve, reject) => {
-            setTimeout(()=>{})
+            setTimeout(() => {
+                resolve('用户数据');
+                // reject('出错啦');
+            }, 1000)
         });
 
-        p.then((value) => {
+
+        // then方法的返回结果是promise对象
+        const result = p.then((value) => {
             console.log(value);
+            // return 123;
+
+            // 抛出错误
+            // throw new Error('出错啦');
+            throw '出错啦';
         }, (reason) => {
-            console.log(reason);
+            console.warn(reason);
         });
+
+        console.log(result);
+
+        // 链式调用
+        // 异步任务 一点一点调用 解决回调地狱
+        p.then(value = {
+
+        }).then(value => {
+
+        })
 
 
     </script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // 创建函数对象
+        function Phone() {
+
+        }
+
+        Phone.name = 'Shouji';
+        Phone.change = function () {
+            console.log('1231');
+        }
+
+        Phone.prototype.size = '5.5inch';
+
+        let nokia = new Phone();
+
+        console.log(nokia.name);
+        console.log(nokia.size);
+
+        // --------------------------------
+
+        class shouji {
+            // 静态属性
+            // static 属于类不属于实例对象
+            static name = '手机';
+            static change() {
+                console.log("change the world");
+            }
+        }
+
+        let nokia2 = new shouji();
+        console.log(nokia2);
+        console.log(nokia2.name);
+        console.log(shouji.name);
+
+
+
+    </script>
+
+</body>
+
+</html>
