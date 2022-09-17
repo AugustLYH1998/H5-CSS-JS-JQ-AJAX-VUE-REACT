@@ -1,0 +1,28 @@
+:root {
+  font-size: 13px;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+
+/* .router-link-active {
+  background-color: rgb(235, 209, 209);
+  box-sizing: border-box;
+  position: relative;
+} */
+
+/* // 伪元素实现路由高亮效果 */
+/* .router-link-active::before {
+  content: ' ';
+  display: block;
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: skyblue;
+} */

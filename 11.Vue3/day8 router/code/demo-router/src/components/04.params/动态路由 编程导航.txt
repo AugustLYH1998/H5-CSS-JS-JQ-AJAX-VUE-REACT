@@ -1,0 +1,11 @@
+$route.params 动态匹配参数值
+
+// 动态路由匹配 :接收动态参数
+{ path: '/movie/:mid', component: Movie, props: true },
+// props: true开启 以props形式匹配传参
+
+      // this.$router.push 跳转指定hush地址
+      this.$router.push('/movie/' + id)
+
+            // 前进与后退
+      this.$router.go(-1)

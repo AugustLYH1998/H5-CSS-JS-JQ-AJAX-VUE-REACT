@@ -1,0 +1,21 @@
+:root {
+  font-size: 12px;
+}
+
+body {
+  padding: 8px;
+}
+
+/* 路由激活链接高亮 默认选项class类名 */
+.router-link-active {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+/* 自定义高亮链接 自定义高亮类名*/
+.active-router {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
