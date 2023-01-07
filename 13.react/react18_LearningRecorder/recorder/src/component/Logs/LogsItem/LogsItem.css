@@ -1,0 +1,37 @@
+.item {
+    background-color: #FCBF49;
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.content {
+    flex: auto;
+    text-align: center;
+
+}
+
+.desc {
+    flex: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #194B49;
+}
+
+
+.time {
+    color: #D62828;
+    font-size: 20px;
+}
+
+.delete{
+    margin: 0px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+
+}
