@@ -1,0 +1,36 @@
+.Meal {
+    border-bottom: 1px solid rgb(208, 199, 199);
+
+    height: 200rem;
+    width: 750rem;
+    background-color: azure;
+
+
+    display: flex;
+    /* justify-content: space-around; */
+
+    padding: 20rem;
+
+}
+
+.pic {
+    height: 150rem;
+    width: 150rem;
+
+}
+
+.desc {
+    margin-left: 40rem;
+}
+
+.title{
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0;
+}
+
+.desc1{
+    margin: 0;
+    color: #ccc;
+    font-size: 5px;
+}
