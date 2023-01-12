@@ -1,26 +1,26 @@
 .Meal {
     border-bottom: 1px solid rgb(208, 199, 199);
 
-    height: 200rem;
-    width: 750rem;
+    height: 400px;
+    width: 400px;
     background-color: azure;
 
 
     display: flex;
     /* justify-content: space-around; */
 
-    padding: 20rem;
+    padding: 20px;
 
 }
 
 .pic {
-    height: 150rem;
-    width: 150rem;
+    height: 150px;
+    width: 150px;
 
 }
 
 .desc {
-    margin-left: 40rem;
+    margin-left: 40px;
 }
 
 .title{
